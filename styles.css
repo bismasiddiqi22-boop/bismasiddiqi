@@ -1,11 +1,11 @@
-@font-face { font-family: "Syne"; src: url("fonts/Syne-Regular.ttf") format("truetype"); font-weight: 400; font-display: swap; }
-@font-face { font-family: "Syne"; src: url("fonts/Syne-SemiBold.ttf") format("truetype"); font-weight: 600; font-display: swap; }
-@font-face { font-family: "Syne"; src: url("fonts/Syne-Bold.ttf") format("truetype"); font-weight: 700; font-display: swap; }
-@font-face { font-family: "Syne"; src: url("fonts/Syne-ExtraBold.ttf") format("truetype"); font-weight: 800; font-display: swap; }
-@font-face { font-family: "Inter"; src: url("fonts/Inter-Regular.ttf") format("truetype"); font-weight: 400; font-display: swap; }
-@font-face { font-family: "Inter"; src: url("fonts/Inter-Medium.ttf") format("truetype"); font-weight: 500; font-display: swap; }
-@font-face { font-family: "Inter"; src: url("fonts/Inter-SemiBold.ttf") format("truetype"); font-weight: 600; font-display: swap; }
-@font-face { font-family: "Inter"; src: url("fonts/Inter-Bold.ttf") format("truetype"); font-weight: 700; font-display: swap; }
+@font-face { font-family: "Syne"; src: url("fonts/Syne-Regular.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Syne"; src: url("fonts/Syne-SemiBold.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Syne"; src: url("fonts/Syne-Bold.woff2") format("woff2"); font-weight: 700; font-display: swap; }
+@font-face { font-family: "Syne"; src: url("fonts/Syne-ExtraBold.woff2") format("woff2"); font-weight: 800; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("fonts/Inter-Regular.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("fonts/Inter-Medium.woff2") format("woff2"); font-weight: 500; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("fonts/Inter-SemiBold.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("fonts/Inter-Bold.woff2") format("woff2"); font-weight: 700; font-display: swap; }
 
 :root {
   --bg: #0C0C0B;
@@ -433,32 +433,12 @@ button { font: inherit; background: none; border: none; cursor: pointer; color: 
 }
 .pcard[data-tint="beelingo"] .pcard-visual { background: linear-gradient(135deg, #3d2a52, #1a1030); }
 .pcard[data-tint="seaserv"] .pcard-visual { background: linear-gradient(135deg, #0f3a4a, #06181f); }
-.pcard[data-tint="revel"] .pcard-visual { background: linear-gradient(135deg, #1f4d3d, #0a1f18); }
-.pcard[data-tint="ethizo"] .pcard-visual { background: linear-gradient(135deg, #4a2a2a, #1f0f0f); }
 
 .pcard-num {
   font-family: "Syne", sans-serif;
   font-weight: 700;
   font-size: 14px;
   color: var(--muted);
-}
-.wip-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 4px 12px;
-  border-radius: var(--radius-pill);
-  background: rgba(255,141,1,0.12);
-  color: var(--accent);
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-}
-.wip-dot {
-  width: 5px; height: 5px;
-  border-radius: 50%;
-  background: currentColor;
-  animation: blink 2.2s ease infinite;
 }
 .pcard-arrow {
   position: absolute;
@@ -496,6 +476,130 @@ button { font: inherit; background: none; border: none; cursor: pointer; color: 
   letter-spacing: 0.06em;
   color: var(--muted);
 }
+
+/* ---------- CASE STUDY DETAIL PAGE ---------- */
+.cs-hero { padding: 160px 44px 0; }
+.cs-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 32px;
+  transition: color 0.3s, gap 0.3s var(--ease);
+}
+.cs-back:hover { color: var(--fg); gap: 12px; }
+.cs-title {
+  font-family: "Syne", sans-serif;
+  font-weight: 800;
+  font-size: clamp(48px, 9vw, 100px);
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+  margin-bottom: 24px;
+}
+.cs-tagline {
+  max-width: 680px;
+  font-size: clamp(16px, 2vw, 20px);
+  color: var(--muted);
+  line-height: 1.55;
+  margin-bottom: 28px;
+}
+.cs-tags { margin-bottom: 56px; }
+
+.cs-visual {
+  position: relative;
+  min-height: 360px;
+  margin: 0 44px;
+  border-radius: 24px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+.cs-visual[data-tint="beelingo"] { background: linear-gradient(135deg, #3d2a52, #1a1030); }
+.cs-visual[data-tint="seaserv"] { background: linear-gradient(135deg, #0f3a4a, #06181f); }
+
+.cs-content { padding: 80px 44px 0; }
+.cs-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  padding-bottom: 56px;
+  margin-bottom: 56px;
+  border-bottom: 1px solid var(--border);
+}
+.cs-meta-grid p { font-family: "Syne", sans-serif; font-weight: 700; font-size: 17px; line-height: 1.4; }
+
+.cs-prose { max-width: 760px; }
+.cs-prose h2 {
+  font-family: "Syne", sans-serif;
+  font-weight: 800;
+  font-size: clamp(28px, 4vw, 38px);
+  letter-spacing: -0.02em;
+  margin-top: 64px;
+  margin-bottom: 20px;
+}
+.cs-prose h2:first-child { margin-top: 0; }
+.cs-prose p { color: var(--muted); font-size: 16px; line-height: 1.7; margin-bottom: 18px; }
+.cs-prose p strong { color: var(--fg); font-weight: 600; }
+.cs-prose ul { display: flex; flex-direction: column; gap: 14px; margin-top: 8px; }
+.cs-prose li {
+  position: relative;
+  padding-left: 26px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.6;
+}
+.cs-prose li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+.cs-prose li strong { color: var(--fg); font-weight: 600; }
+
+.cs-next {
+  margin-top: 100px;
+  border-top: 1px solid var(--border);
+  padding: 64px 44px;
+}
+.cs-next-link { display: inline-flex; flex-direction: column; gap: 12px; }
+.cs-next-title {
+  font-family: "Syne", sans-serif;
+  font-weight: 800;
+  font-size: clamp(32px, 6vw, 56px);
+  letter-spacing: -0.03em;
+  transition: gap 0.3s var(--ease), color 0.3s var(--ease);
+}
+.cs-next-link:hover .cs-next-title { color: var(--accent); }
+
+@media (max-width: 900px) {
+  .cs-hero { padding: 120px 20px 0; }
+  .cs-visual { margin: 0 20px; min-height: 240px; }
+  .cs-content { padding: 56px 20px 0; }
+  .cs-meta-grid { grid-template-columns: repeat(2, 1fr); gap: 32px 24px; }
+  .cs-next { padding: 48px 20px; }
+}
+
+/* ---------- PHONE FIELD (country code) ---------- */
+.phone-field { display: flex; gap: 8px; }
+.phone-code {
+  flex-shrink: 0;
+  width: 108px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 8px;
+  color: var(--fg);
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  transition: border-color 0.3s var(--ease);
+}
+.phone-code:focus { outline: none; border-color: var(--accent); }
+.phone-field input[type="tel"] { flex: 1; min-width: 0; }
 
 /* ---------- NUMBERS ---------- */
 .numbers-section { padding: 100px 44px; border-top: 1px solid var(--border); text-align: center; }

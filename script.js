@@ -80,12 +80,15 @@
 
   /* ---------- Hero text reveal ---------- */
   var heroTitle = document.querySelector(".hero-title");
-  requestAnimationFrame(function () {
-    setTimeout(function () {
-      heroTitle.classList.add("in-view");
-      document.querySelector(".hero-top .reveal-line").classList.add("in-view");
-    }, 150);
-  });
+  if (heroTitle) {
+    requestAnimationFrame(function () {
+      setTimeout(function () {
+        heroTitle.classList.add("in-view");
+        var revealLine = document.querySelector(".hero-top .reveal-line");
+        if (revealLine) revealLine.classList.add("in-view");
+      }, 150);
+    });
+  }
 
   /* ---------- Scroll reveal (IntersectionObserver) ---------- */
   var revealEls = document.querySelectorAll(".reveal");
@@ -116,7 +119,7 @@
   var cursorLabel = document.getElementById("cursorLabel");
   var hasFinePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 
-  if (hasFinePointer) {
+  if (hasFinePointer && cursorLabel) {
     document.addEventListener("mousemove", function (e) {
       cursorLabel.style.left = e.clientX + "px";
       cursorLabel.style.top = e.clientY + "px";
@@ -254,14 +257,17 @@
     contactForm.addEventListener("submit", function (e) {
       e.preventDefault();
       var name = document.getElementById("cfName").value.trim();
+      var countryCodeEl = document.getElementById("cfCountryCode");
+      var countryCode = countryCodeEl ? countryCodeEl.value : "";
       var phone = document.getElementById("cfPhone").value.trim();
+      var phoneFull = phone ? (countryCode + " " + phone) : "";
       var email = document.getElementById("cfEmail").value.trim();
       var message = document.getElementById("cfMessage").value.trim();
 
       var subject = encodeURIComponent("New inquiry from " + name);
       var bodyLines = [
         "Name: " + name,
-        "Phone: " + (phone || "—"),
+        "Phone: " + (phoneFull || "—"),
         "Email: " + email,
         "",
         message

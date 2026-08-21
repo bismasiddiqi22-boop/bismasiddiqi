@@ -1,0 +1,13 @@
+{
+  "name": "Bisma Siddiqi — Project Manager & Business Analyst",
+  "short_name": "Bisma",
+  "icons": [
+    { "src": "/favicon-32.png", "sizes": "32x32", "type": "image/png" },
+    { "src": "/favicon-16.png", "sizes": "16x16", "type": "image/png" },
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ],
+  "theme_color": "#0C0C0B",
+  "background_color": "#0C0C0B",
+  "display": "standalone",
+  "start_url": "/"
+}

@@ -1,0 +1,16 @@
+# Bisma Siddiqi
+
+> Project Manager and Business Analyst who turns complex requirements into products people use. Works across EdTech, luxury maritime SaaS, health tech, and healthcare marketplace products, with clients across the USA, UK, Europe, and the Gulf.
+
+Bisma leads discovery, requirements gathering, product strategy, and product architecture, then coordinates design, engineering, and QA through delivery. She is available for remote project management, business analysis, and product work worldwide.
+
+## Case studies
+
+- [Beelingo](https://bismasiddiqi.vercel.app/beelingo.html): AI-powered learning and assessment platform for schools across the USA and Europe. Bisma led requirements gathering, product strategy, and architecture, including the human-validation workflow around AI-generated assessments.
+- [SeaServ](https://bismasiddiqi.vercel.app/seaserv.html): Luxury maritime SaaS platform for yacht guests, crew, chiefs, and admin teams, rebuilt from the ground up. Bisma led discovery, product architecture, and cross-functional delivery.
+
+## Contact
+
+- Email: bismasiddiqi22@gmail.com
+- LinkedIn: https://www.linkedin.com/in/bisma-siddiqi
+- Site: https://bismasiddiqi.vercel.app/
