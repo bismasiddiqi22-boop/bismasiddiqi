@@ -432,7 +432,11 @@ button { font: inherit; background: none; border: none; cursor: pointer; color: 
   min-height: 320px;
 }
 .pcard[data-tint="beelingo"] .pcard-visual { background: linear-gradient(135deg, #3d2a52, #1a1030); }
-.pcard[data-tint="seaserv"] .pcard-visual { background: linear-gradient(135deg, #0f3a4a, #06181f); }
+.pcard[data-tint="seaserv"] .pcard-visual {
+  background: linear-gradient(0deg, rgba(6, 24, 31, 0.55), rgba(6, 24, 31, 0.15)), url("images/seaserv/cover.webp");
+  background-size: cover;
+  background-position: center;
+}
 
 .pcard-num {
   font-family: "Syne", sans-serif;
@@ -516,7 +520,50 @@ button { font: inherit; background: none; border: none; cursor: pointer; color: 
   overflow: hidden;
 }
 .cs-visual[data-tint="beelingo"] { background: linear-gradient(135deg, #3d2a52, #1a1030); }
-.cs-visual[data-tint="seaserv"] { background: linear-gradient(135deg, #0f3a4a, #06181f); }
+.cs-visual[data-tint="seaserv"] {
+  background: url("images/seaserv/cover.webp");
+  background-size: cover;
+  background-position: center;
+}
+
+/* ---------- PROJECT SNAPSHOTS GALLERY ---------- */
+.cs-gallery {
+  padding: 80px 44px 0;
+}
+.cs-gallery-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  gap: 20px;
+}
+.cs-gallery-item {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 420px;
+}
+.cs-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.cs-gallery-item.wide {
+  grid-column: 1 / -1;
+  min-height: 320px;
+}
+.cs-gallery-item.wide img { object-fit: contain; }
+@media (max-width: 800px) {
+  .cs-gallery { padding: 56px 20px 0; }
+  .cs-gallery-grid { grid-template-columns: 1fr 1fr; }
+  .cs-gallery-item { min-height: 280px; }
+  .cs-gallery-item.wide { min-height: 220px; }
+}
+@media (max-width: 520px) {
+  .cs-gallery-grid { grid-template-columns: 1fr; }
+}
 
 .cs-content { padding: 80px 44px 0; }
 .cs-meta-grid {

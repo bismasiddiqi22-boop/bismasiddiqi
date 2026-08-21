@@ -109,10 +109,41 @@
     revealEls.forEach(function (el) { el.classList.add("in-view"); });
   }
 
-  /* ---------- Marquee speed via data-speed ---------- */
-  document.querySelectorAll(".marquee[data-speed]").forEach(function (m) {
+  /* ---------- Marquee: seamless infinite loop, no gaps on any viewport ---------- */
+  var marquees = document.querySelectorAll(".marquee[data-speed-px]");
+
+  function setupMarquee(m) {
     var track = m.querySelector(".marquee-track");
-    if (track) track.style.animationDuration = m.getAttribute("data-speed") + "s";
+    if (!track) return;
+    var pxPerSecond = parseFloat(m.getAttribute("data-speed-px")) || 50;
+
+    if (!track.dataset.baseHtml) track.dataset.baseHtml = track.innerHTML;
+    track.style.animation = "none";
+    track.innerHTML = track.dataset.baseHtml;
+
+    var singleSetWidth = track.scrollWidth;
+    if (!singleSetWidth) return;
+
+    var viewportWidth = window.innerWidth;
+    var setsNeeded = Math.max(2, Math.ceil((viewportWidth + 100) / singleSetWidth) + 1);
+    var html = "";
+    for (var i = 0; i < setsNeeded; i++) html += track.dataset.baseHtml;
+    track.innerHTML = html + html;
+
+    var fullWidth = track.scrollWidth;
+    var duration = (fullWidth / 2) / pxPerSecond;
+    track.style.animation = "";
+    track.style.animationDuration = duration + "s";
+  }
+
+  marquees.forEach(setupMarquee);
+
+  var marqueeResizeTimer;
+  window.addEventListener("resize", function () {
+    clearTimeout(marqueeResizeTimer);
+    marqueeResizeTimer = setTimeout(function () {
+      marquees.forEach(setupMarquee);
+    }, 250);
   });
 
   /* ---------- Cursor label on project cards ---------- */
