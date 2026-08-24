@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Site Admin — Bisma Siddiqi</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<!-- LOGIN -->
+<div id="loginScreen" class="login-screen">
+  <form id="loginForm" class="login-card">
+    <h1>Site Admin</h1>
+    <p class="hint">Enter the admin password to edit your site's content.</p>
+    <input type="password" id="loginPassword" placeholder="Password" autocomplete="current-password" required>
+    <button type="submit" class="btn-primary">Log in</button>
+    <p id="loginError" class="error-text" hidden></p>
+  </form>
+</div>
+
+<!-- EDITOR -->
+<div id="editorScreen" class="editor-screen" hidden>
+  <header class="editor-header">
+    <h1>Site Admin</h1>
+    <div class="header-actions">
+      <span id="saveStatus" class="save-status"></span>
+      <button type="button" id="saveBtn" class="btn-primary">Save &amp; Publish</button>
+    </div>
+  </header>
+
+  <main class="editor-main">
+
+    <!-- HERO -->
+    <section class="panel">
+      <h2>Hero</h2>
+      <label>Eyebrow text
+        <input type="text" id="heroEyebrow">
+      </label>
+      <label>Title — line 1
+        <input type="text" id="heroLine1">
+      </label>
+      <label>Title — line 2
+        <input type="text" id="heroLine2">
+      </label>
+      <label>Title — line 3 <span class="hint-inline">(supports &lt;em&gt;word&lt;/em&gt; for italics)</span>
+        <input type="text" id="heroLine3">
+      </label>
+      <label class="checkbox-label">
+        <input type="checkbox" id="heroIsOpen">
+        Open to new projects
+      </label>
+      <label>Availability pill text
+        <input type="text" id="heroPillText">
+      </label>
+      <label>Availability meta text
+        <input type="text" id="heroMetaText">
+      </label>
+    </section>
+
+    <!-- NUMBERS -->
+    <section class="panel">
+      <h2>A Few Numbers <span class="hint-inline">(always exactly 4 — fixed grid)</span></h2>
+      <div id="numbersList" class="repeat-list"></div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="panel">
+      <h2>About</h2>
+      <label>Paragraphs <span class="hint-inline">(supports &lt;strong&gt;bold&lt;/strong&gt;)</span></label>
+      <div id="aboutParagraphs" class="repeat-list"></div>
+      <button type="button" class="btn-secondary btn-add" data-add="paragraph">+ Add paragraph</button>
+
+      <label class="section-sub">Experience</label>
+      <div id="aboutExperience" class="repeat-list"></div>
+      <button type="button" class="btn-secondary btn-add" data-add="experience">+ Add experience row</button>
+
+      <label class="section-sub">Skills</label>
+      <div id="aboutSkills" class="repeat-list"></div>
+      <button type="button" class="btn-secondary btn-add" data-add="skill">+ Add skill</button>
+    </section>
+
+    <!-- CASE STUDIES -->
+    <section class="panel">
+      <h2>Work / Case Studies</h2>
+      <p class="hint">Each card follows the site's fixed template — hero, tagline, tags, a 4-row sidebar, and a Markdown body. Reorder with the arrows; order determines the homepage number and the "next case study" links.</p>
+      <div id="caseStudiesList"></div>
+      <button type="button" id="addCaseStudyBtn" class="btn-secondary btn-add">+ Add case study</button>
+    </section>
+
+  </main>
+
+  <footer class="editor-footer">
+    <span id="saveStatusFooter" class="save-status"></span>
+    <button type="button" id="saveBtnFooter" class="btn-primary">Save &amp; Publish</button>
+  </footer>
+</div>
+
+<template id="caseStudyTemplate">
+  <div class="cs-card panel" data-slug="">
+    <div class="cs-card-head">
+      <button type="button" class="reorder-btn" data-action="up" title="Move up">↑</button>
+      <button type="button" class="reorder-btn" data-action="down" title="Move down">↓</button>
+      <strong class="cs-card-title-label"></strong>
+      <button type="button" class="cs-toggle" data-action="toggle">Edit</button>
+      <button type="button" class="btn-danger" data-action="delete">Delete</button>
+    </div>
+    <div class="cs-card-body" hidden>
+
+      <label>Slug <span class="hint-inline">(used in the URL, e.g. "seaserv" → seaserv.html — avoid changing after the page is live)</span>
+        <input type="text" class="f-slug">
+      </label>
+
+      <h3>Homepage card</h3>
+      <label>Card meta line <span class="hint-inline">e.g. "Beelingo / EdTech · USA &amp; Europe"</span>
+        <input type="text" class="f-cardMeta">
+      </label>
+      <label>Card title
+        <input type="text" class="f-cardTitle">
+      </label>
+      <label>Card tags <span class="hint-inline">(comma-separated)</span>
+        <input type="text" class="f-cardTags">
+      </label>
+      <div class="two-col">
+        <label>Stat 1 — number
+          <input type="text" class="f-stat0-num">
+        </label>
+        <label>Stat 1 — label <span class="hint-inline">(use &lt;br&gt; for the line break)</span>
+          <input type="text" class="f-stat0-label">
+        </label>
+      </div>
+      <div class="two-col">
+        <label>Stat 2 — number
+          <input type="text" class="f-stat1-num">
+        </label>
+        <label>Stat 2 — label
+          <input type="text" class="f-stat1-label">
+        </label>
+      </div>
+
+      <h3>Cover image</h3>
+      <div class="cover-upload">
+        <img class="f-coverPreview" alt="Cover preview">
+        <div>
+          <input type="file" class="f-coverFile" accept="image/*">
+          <p class="hint">Resized to ~1600×900 (16:9) and converted to WebP automatically.</p>
+        </div>
+      </div>
+      <details class="advanced">
+        <summary>Advanced: homepage card overlay</summary>
+        <label>CSS gradient overlay <span class="hint-inline">(optional — only affects the homepage card, not the case-study hero image)</span>
+          <input type="text" class="f-cardVisualOverlay" placeholder="e.g. linear-gradient(0deg, rgba(0,0,0,.5), rgba(0,0,0,.1))">
+        </label>
+      </details>
+
+      <h3>Case study page</h3>
+      <label>Eyebrow / industry line
+        <input type="text" class="f-heroEyebrow">
+      </label>
+      <label>Title
+        <input type="text" class="f-heroTitle">
+      </label>
+      <label>Tagline
+        <textarea class="f-heroTagline" rows="2"></textarea>
+      </label>
+      <label>Tags <span class="hint-inline">(comma-separated)</span>
+        <input type="text" class="f-heroTags">
+      </label>
+
+      <label class="section-sub">Sidebar (4 fixed rows)</label>
+      <div class="sidebar-rows">
+        <div class="two-col"><input type="text" class="f-sb0-label" placeholder="Label"><input type="text" class="f-sb0-value" placeholder="Value"></div>
+        <div class="two-col"><input type="text" class="f-sb1-label" placeholder="Label"><input type="text" class="f-sb1-value" placeholder="Value"></div>
+        <div class="two-col"><input type="text" class="f-sb2-label" placeholder="Label"><input type="text" class="f-sb2-value" placeholder="Value"></div>
+        <div class="two-col"><input type="text" class="f-sb3-label" placeholder="Label"><input type="text" class="f-sb3-value" placeholder="Value"></div>
+      </div>
+
+      <label>Body <span class="hint-inline">Markdown — <code>## Heading</code>, plain paragraphs, <code>**bold**</code>, <code>- bullet</code></span>
+        <textarea class="f-bodyMarkdown" rows="16"></textarea>
+      </label>
+      <button type="button" class="btn-secondary" data-action="preview">Preview this page</button>
+
+      <h3>SEO</h3>
+      <label>Page title
+        <input type="text" class="f-seo-title">
+      </label>
+      <label>Meta description
+        <textarea class="f-seo-description" rows="2"></textarea>
+      </label>
+      <label>Keywords <span class="hint-inline">(comma-separated)</span>
+        <input type="text" class="f-seo-keywords">
+      </label>
+      <div class="two-col">
+        <label>Social share title
+          <input type="text" class="f-seo-ogTitle">
+        </label>
+        <label>Twitter title
+          <input type="text" class="f-seo-twitterTitle">
+        </label>
+      </div>
+      <div class="two-col">
+        <label>Social share description
+          <textarea class="f-seo-ogDescription" rows="2"></textarea>
+        </label>
+        <label>Twitter description
+          <textarea class="f-seo-twitterDescription" rows="2"></textarea>
+        </label>
+      </div>
+      <label>llms.txt one-line summary
+        <textarea class="f-seo-llmsSummary" rows="2"></textarea>
+      </label>
+      <details class="advanced">
+        <summary>Advanced: structured data (JSON-LD)</summary>
+        <label>Headline
+          <input type="text" class="f-seo-jsonLdHeadline">
+        </label>
+        <label>Description
+          <textarea class="f-seo-jsonLdDescription" rows="2"></textarea>
+        </label>
+        <label>About (short category)
+          <input type="text" class="f-seo-jsonLdAbout">
+        </label>
+      </details>
+
+    </div>
+  </div>
+</template>
+
+<div id="previewOverlay" class="preview-overlay" hidden>
+  <div class="preview-frame-wrap">
+    <button type="button" id="previewClose" class="btn-secondary">Close preview</button>
+    <iframe id="previewFrame" title="Page preview"></iframe>
+  </div>
+</div>
+
+<script type="module" src="admin.js"></script>
+</body>
+</html>

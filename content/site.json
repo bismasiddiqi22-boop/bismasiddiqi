@@ -1,0 +1,121 @@
+{
+  "hero": {
+    "eyebrow": "PROJECT MANAGER · BA · PRODUCT",
+    "titleLines": [
+      "I turn complex",
+      "requirements into",
+      "products people <em>use</em>."
+    ],
+    "availability": {
+      "isOpen": true,
+      "pillText": "OPEN TO NEW PROJECTS",
+      "metaText": "REMOTE · WORLDWIDE"
+    }
+  },
+  "numbers": [
+    { "type": "single", "value": 20, "suffix": "+", "label": "Team members<br>collaborated with" },
+    { "type": "range", "from": 7, "to": 10, "suffix": "", "label": "Designers<br>partnered with" },
+    { "type": "range", "from": 10, "to": 12, "suffix": "", "label": "Engineers<br>worked alongside" },
+    { "type": "single", "value": 5, "suffix": "+", "label": "Products<br>shipped to market" }
+  ],
+  "about": {
+    "paragraphs": [
+      "<strong>I've spent my career at the intersection of requirements and execution.</strong> Translating fuzzy business asks into specs engineering can actually build, and specs back into outcomes stakeholders can actually see.",
+      "<strong>My process starts with the \"why.\"</strong> Before a single user story gets written, I want to understand the constraint, the user, and the business case behind it.",
+      "<strong>I own the full lifecycle</strong> — from discovery and requirement gathering through prototyping, delivery, and QA. I like being the person a team can hand ambiguity to.",
+      "Along the way I've worked across AI/EdTech, maritime operations, health tech, and healthcare marketplaces — each one starting the same way: a messy set of requirements, and a product people actually needed."
+    ],
+    "experience": [
+      { "company": "Dot2Shape", "role": "Project Manager", "year": "Present" },
+      { "company": "Beelingo.AI", "role": "Business Analyst / Product", "year": "Prior" }
+    ],
+    "skills": [
+      "Project Management",
+      "Business Analysis",
+      "Product Strategy",
+      "Requirements Gathering",
+      "Prototyping",
+      "UX Thinking",
+      "Stakeholder Alignment",
+      "Cross-functional Leadership",
+      "Agile &amp; Scrum",
+      "QA &amp; Delivery",
+      "Data-informed Decisions",
+      "Roadmapping"
+    ]
+  },
+  "caseStudies": [
+    {
+      "slug": "beelingo",
+      "coverImage": "images/beelingo/cover.webp",
+      "cardVisualOverlay": null,
+      "cardMeta": "Beelingo / EdTech · USA &amp; Europe",
+      "cardTitle": "Bringing AI-powered learning and assessment into one platform for schools",
+      "cardTags": ["AI", "EDTECH"],
+      "cardStats": [
+        { "num": "4", "label": "User groups on one platform<br>School, teacher, student, parent" },
+        { "num": "3", "label": "Surfaces delivered<br>Web, mobile &amp; tablet" }
+      ],
+      "seo": {
+        "title": "Beelingo Case Study — AI Learning &amp; Assessment Platform | Bisma Siddiqi",
+        "description": "How Business Analyst & Product Manager Bisma Siddiqi led requirements, product strategy, and architecture for Beelingo, an AI-powered learning and assessment platform used by schools across the USA and Europe.",
+        "keywords": "Business Analyst case study, Product Manager EdTech, AI learning platform, requirements gathering, product architecture, Beelingo",
+        "ogTitle": "Beelingo — AI Learning &amp; Assessment Platform Case Study",
+        "ogDescription": "How I led requirements, product strategy, and architecture for Beelingo, an AI-powered learning and assessment platform used by schools across the USA and Europe.",
+        "twitterTitle": "Beelingo — AI Learning &amp; Assessment Platform Case Study",
+        "twitterDescription": "How I led requirements, product strategy, and architecture for an AI-powered learning platform used by schools across the USA and Europe.",
+        "jsonLdHeadline": "Beelingo — AI-Powered Learning & Assessment Platform",
+        "jsonLdDescription": "How Business Analyst and Product Manager Bisma Siddiqi led requirements, product strategy, and architecture for Beelingo, an AI-powered learning and assessment platform serving schools across the USA and Europe.",
+        "jsonLdAbout": "EdTech product management case study",
+        "llmsSummary": "AI-powered learning and assessment platform for schools across the USA and Europe. Bisma led requirements gathering, product strategy, and architecture, including the human-validation workflow around AI-generated assessments."
+      },
+      "heroEyebrow": "EDTECH &middot; AI-POWERED EDUCATION &amp; ASSESSMENT &middot; USA &amp; EUROPE",
+      "heroTitle": "Beelingo",
+      "heroTagline": "An AI-powered learning and assessment platform that brings schools, teachers, students, and parents onto one connected system &mdash; with AI doing the heavy lifting on content creation, and a human validation layer keeping it accurate.",
+      "heroTags": ["BUSINESS ANALYSIS", "PRODUCT STRATEGY", "PRODUCT ARCHITECTURE", "QA &amp; DELIVERY"],
+      "sidebar": [
+        { "label": "INDUSTRY", "value": "EdTech" },
+        { "label": "REGION", "value": "USA &amp; Europe" },
+        { "label": "PLATFORMS", "value": "Web, Mobile, Tablet" },
+        { "label": "MY ROLE", "value": "Business Analysis &amp; Product Strategy" }
+      ],
+      "bodyMarkdown": "## The challenge\n\nSchools and educators were managing learning, assignments, assessments, and examinations across disconnected tools and manual processes. Beelingo set out to bring all of it into one scalable platform — and to use AI to remove real manual effort from academic content creation, not just bolt AI on as a feature.\n\nThe hard part wasn't the AI. It was the ecosystem underneath it: four very different user groups (schools, teachers, students, parents), spanning every grade, subject, and curriculum, all needing a coherent product rather than four disconnected ones.\n\n## My role\n\nI led this engagement as Business Analyst and Product Manager on behalf of <strong>Dot2Shape</strong>, the digital product studio that owns and delivered the Beelingo platform. I led requirements gathering and stakeholder discovery across every user group — mapping how schools, teachers, students, and parents actually worked day to day, and translating that into structured user flows Dot2Shape's design and engineering teams could build against.\n\nA large part of the job was <strong>keeping the product architecture honest</strong> as the scope grew: making sure a feature built for one grade or subject wouldn't need to be rebuilt when the next one was added. I worked across product strategy, UX direction, and architecture to keep the whole system modular rather than letting it sprawl.\n\nThe AI assignment generator needed the most careful requirements work. I defined what inputs it needed to take (subject, grade, topic, difficulty, learning objective) and — just as important — specified the human validation workflow sitting around it, so AI-generated assessments couldn't reach a classroom without a review step confirming accuracy and curriculum alignment.\n\n## What we built\n\n- <strong>Parent &amp; student experience</strong> — access to learning activities, assignments, sessions, examinations, and academic progress in one place.\n- <strong>School &amp; teacher experience</strong> — tools to manage learning content, assignments, assessments, and student activity.\n- <strong>AI assignment generator</strong> — generates questions based on subject, grade, topic, difficulty, and learning requirements.\n- <strong>Assessment &amp; examination workflows</strong> — structured assessment and exam delivery, combining AI-generated content with human validation for accuracy and quality.\n- <strong>A modular foundation</strong> — built to expand across new subjects, grades, and academic workflows without re-architecting.\n\n## Outcomes\n\n- Simplified education and assessment workflows for every user group on the platform.\n- Reduced manual effort in academic content creation through AI-assisted generation with human oversight.\n- Supported multiple user types, grades, and subjects on one coherent platform, not four separate ones.\n- Left the team with a scalable foundation for AI-powered learning and assessment going forward.\n\n## Built with\n\nDelivered end-to-end across web, mobile, and tablet, with product strategy, UX/UI, architecture, and development working in one integrated process."
+    },
+    {
+      "slug": "seaserv",
+      "coverImage": "images/seaserv/cover.webp",
+      "cardVisualOverlay": "linear-gradient(0deg, rgba(6, 24, 31, 0.55), rgba(6, 24, 31, 0.15))",
+      "cardMeta": "SeaServ / Luxury Maritime SaaS",
+      "cardTitle": "Rebuilding a luxury yacht platform's product architecture from the ground up",
+      "cardTags": ["MARITIME", "SAAS"],
+      "cardStats": [
+        { "num": "4", "label": "User roles served<br>Guest, crew, chief, admin" },
+        { "num": "4", "label": "Product surfaces shipped<br>2 apps, dashboard &amp; admin portal" }
+      ],
+      "seo": {
+        "title": "SeaServ Case Study — Luxury Maritime SaaS Platform | Bisma Siddiqi",
+        "description": "How Business Analyst & Product Manager Bisma Siddiqi led discovery, product architecture, and cross-functional delivery for SeaServ, a luxury yacht management platform rebuilt from the ground up.",
+        "keywords": "Business Analyst case study, Product Manager SaaS, product architecture, discovery, luxury maritime technology, SeaServ",
+        "ogTitle": "SeaServ — Luxury Maritime SaaS Platform Case Study",
+        "ogDescription": "How I led discovery, product architecture, and cross-functional delivery for a luxury yacht management platform rebuilt from the ground up.",
+        "twitterTitle": "SeaServ — Luxury Maritime SaaS Platform Case Study",
+        "twitterDescription": "How I led discovery, product architecture, and cross-functional delivery for a luxury yacht management platform rebuilt from the ground up.",
+        "jsonLdHeadline": "SeaServ — Luxury Maritime SaaS Platform",
+        "jsonLdDescription": "How Business Analyst and Product Manager Bisma Siddiqi led discovery, product architecture, and cross-functional delivery for SeaServ, a luxury yacht management platform rebuilt from the ground up.",
+        "jsonLdAbout": "Luxury maritime SaaS product management case study",
+        "llmsSummary": "Luxury maritime SaaS platform for yacht guests, crew, chiefs, and admin teams, rebuilt from the ground up. Bisma led discovery, product architecture, and cross-functional delivery."
+      },
+      "heroEyebrow": "LUXURY MARITIME TECHNOLOGY &middot; SAAS",
+      "heroTitle": "SeaServ",
+      "heroTagline": "A connected digital ecosystem for luxury yacht operations &mdash; rebuilt from the ground up for guests, crew, chiefs, and management teams, after the original platform fell short of the premium experience the industry expects.",
+      "heroTags": ["DISCOVERY &amp; REQUIREMENTS", "PRODUCT ARCHITECTURE", "CROSS-FUNCTIONAL COORDINATION", "QA &amp; LAUNCH SUPPORT"],
+      "sidebar": [
+        { "label": "INDUSTRY", "value": "Luxury Maritime Tech &middot; SaaS" },
+        { "label": "USER ROLES", "value": "Guest, Crew, Chief, Admin" },
+        { "label": "SURFACES", "value": "2 mobile apps, dashboard, admin portal" },
+        { "label": "MY ROLE", "value": "Discovery, Architecture &amp; Delivery" }
+      ],
+      "bodyMarkdown": "## The challenge\n\nSeaServ already had a digital platform — the problem wasn't that it didn't exist, it was that it didn't hold up. Fragmented workflows, inconsistent experiences, and a limited technical foundation made daily operations inefficient for guests, crew, and yacht management alike, in an industry where \"good enough\" isn't good enough.\n\nUnderneath the outdated visual design sat a deeper problem: no scalable design system, features added without a clear product architecture, and almost no real differentiation between four very different users — Guest, Crew, Chief, and Admin — who each needed the platform to do something different.\n\n## My role\n\nI led this engagement as Business Analyst and Product Manager on behalf of <strong>Dot2Shape</strong>, the digital product studio that owns and delivered the SeaServ platform. The instinct with a project like this is to jump straight to a visual redesign. I pushed the other way: before touching a single screen, I worked to understand the client's vision for the business, then audited the existing platform end to end — mapping every workflow across all four user roles to understand exactly where and why it was breaking down.\n\nThat audit became the basis for a new product architecture, built from the ground up rather than patched on top of the old one. I coordinated Dot2Shape's design and engineering teams to keep UX strategy, interface design, backend development, and QA moving as one connected process rather than a handoff chain — and stayed on through launch support to make sure what shipped matched what we'd scoped.\n\n## What we built\n\n- <strong>Guest mobile application</strong> — a dedicated, premium experience for the people the whole platform exists to serve.\n- <strong>Crew mobile application</strong> — workflows built around how crew actually operate day to day, not adapted from the guest experience.\n- <strong>Chief dashboard</strong> — oversight tools suited to a chief's operational responsibilities.\n- <strong>Super admin portal</strong> — centralized control for yacht management teams.\n- <strong>A unified design system and brand refresh</strong> — so all four surfaces feel like one product, not four.\n- <strong>A new product architecture</strong> — built on a Flutter frontend and Node.js backend, designed to scale.\n\n## Outcomes\n\n- A premium user experience aligned with luxury maritime standards, across every role on the platform.\n- Streamlined, role-specific workflows replacing the one-size-fits-all approach of the original product.\n- A scalable architecture built to support future product growth rather than more workarounds.\n- A consistent experience across web and mobile, backed by one unified design and engineering process.\n- A production-ready platform replacing the early-stage product it grew out of.\n\n## Built with\n\nDesign in Figma; Flutter on the frontend; Node.js on the backend — delivered end-to-end from UX strategy through backend engineering, QA, and launch support."
+    }
+  ]
+}

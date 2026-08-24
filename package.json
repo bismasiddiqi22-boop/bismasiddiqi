@@ -1,0 +1,14 @@
+{
+  "name": "bisma-portfolio",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "20.x"
+  },
+  "scripts": {
+    "build:local": "node scripts/build-local.js"
+  },
+  "dependencies": {
+    "marked": "^14.1.3"
+  }
+}
