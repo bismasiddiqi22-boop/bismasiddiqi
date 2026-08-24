@@ -237,6 +237,8 @@ button { font: inherit; background: none; border: none; cursor: pointer; color: 
   flex-direction: column;
   justify-content: flex-end;
   padding: 140px 44px 56px;
+  max-width: 1600px;
+  margin: 0 auto;
   position: relative;
 }
 
@@ -347,6 +349,8 @@ button { font: inherit; background: none; border: none; cursor: pointer; color: 
 /* ---------- FLOW / MARQUEE ---------- */
 .flow-section {
   padding: 100px 44px;
+  max-width: 1600px;
+  margin: 0 auto;
   border-top: 1px solid var(--border);
 }
 .flow-heading {
@@ -392,7 +396,7 @@ button { font: inherit; background: none; border: none; cursor: pointer; color: 
 .flow-plus { color: var(--muted); font-size: 13px; font-weight: 500; }
 
 /* ---------- WORK ---------- */
-.work-section { padding: 100px 44px; border-top: 1px solid var(--border); }
+.work-section { padding: 100px 44px; max-width: 1600px; margin: 0 auto; border-top: 1px solid var(--border); }
 .section-head { margin-bottom: 56px; }
 .section-title {
   font-family: "Syne", sans-serif;
@@ -497,7 +501,7 @@ button { font: inherit; background: none; border: none; cursor: pointer; color: 
 }
 
 /* ---------- CASE STUDY DETAIL PAGE ---------- */
-.cs-hero { padding: 160px 44px 0; }
+.cs-hero { padding: 160px 44px 0; max-width: 1600px; margin: 0 auto; }
 .cs-back {
   display: inline-flex;
   align-items: center;
@@ -529,7 +533,7 @@ button { font: inherit; background: none; border: none; cursor: pointer; color: 
 .cs-visual {
   position: relative;
   aspect-ratio: 16 / 9;
-  margin: 0 44px;
+  margin: 0 max(44px, calc((100% - 1512px) / 2));
   border-radius: 24px;
   border: 1px solid var(--border);
   overflow: hidden;
@@ -598,6 +602,9 @@ button { font: inherit; background: none; border: none; cursor: pointer; color: 
 
 .cs-next {
   margin-top: 100px;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
   border-top: 1px solid var(--border);
   padding: 64px 44px;
 }
@@ -650,7 +657,7 @@ button { font: inherit; background: none; border: none; cursor: pointer; color: 
 .phone-field input[type="tel"] { flex: 1; min-width: 0; }
 
 /* ---------- NUMBERS ---------- */
-.numbers-section { padding: 100px 44px; border-top: 1px solid var(--border); text-align: center; }
+.numbers-section { padding: 100px 44px; max-width: 1600px; margin: 0 auto; border-top: 1px solid var(--border); text-align: center; }
 .numbers-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -697,7 +704,7 @@ button { font: inherit; background: none; border: none; cursor: pointer; color: 
 .skill-pill:hover { border-color: var(--accent); color: var(--fg); background: rgba(255,141,1,0.06); }
 
 /* ---------- HOW I WORK ---------- */
-.howiwork-section { padding: 100px 44px; border-top: 1px solid var(--border); }
+.howiwork-section { padding: 100px 44px; max-width: 1600px; margin: 0 auto; border-top: 1px solid var(--border); }
 .howiwork-section .section-title { font-size: clamp(36px, 6vw, 64px); margin-bottom: 48px; }
 
 .step-list {
@@ -726,7 +733,7 @@ button { font: inherit; background: none; border: none; cursor: pointer; color: 
 }
 
 /* ---------- ABOUT ---------- */
-.about-section { padding: 100px 44px; border-top: 1px solid var(--border); }
+.about-section { padding: 100px 44px; max-width: 1600px; margin: 0 auto; border-top: 1px solid var(--border); }
 .about-title {
   font-family: "Syne", sans-serif;
   font-weight: 800;
@@ -769,6 +776,8 @@ button { font: inherit; background: none; border: none; cursor: pointer; color: 
 /* ---------- ABOUT ME CALLOUT ---------- */
 .aboutme-section {
   padding: 140px 44px;
+  max-width: 1600px;
+  margin: 0 auto;
   border-top: 1px solid var(--border);
   text-align: center;
 }
@@ -785,6 +794,8 @@ button { font: inherit; background: none; border: none; cursor: pointer; color: 
 /* ---------- CONTACT ---------- */
 .contact-section {
   padding: 140px 44px 100px;
+  max-width: 1600px;
+  margin: 0 auto;
   border-top: 1px solid var(--border);
   text-align: left;
 }
