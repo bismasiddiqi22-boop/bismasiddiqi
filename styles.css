@@ -414,7 +414,7 @@ button { font: inherit; background: none; border: none; cursor: pointer; color: 
   border-radius: 24px;
   border: 1px solid var(--border);
   overflow: hidden;
-  background: var(--bg2);
+  background: var(--bg);
   transition: border-color 0.4s var(--ease), transform 0.4s var(--ease);
   cursor: pointer;
 }
@@ -465,7 +465,7 @@ button { font: inherit; background: none; border: none; cursor: pointer; color: 
 }
 .pcard:hover .pcard-arrow { background: var(--accent); color: var(--on-accent); transform: rotate(45deg); }
 
-.pcard-info { padding: 32px; display: flex; flex-direction: column; justify-content: space-between; }
+.pcard-info { padding: 32px; display: flex; flex-direction: column; }
 .pcard-mid { display: flex; flex-direction: column; gap: 12px; }
 .pcard-meta { font-size: 12px; color: var(--muted); font-weight: 500; }
 .pcard-title {
@@ -476,6 +476,16 @@ button { font: inherit; background: none; border: none; cursor: pointer; color: 
   letter-spacing: -0.01em;
 }
 .pcard-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 4px; }
+
+.pcard-stats { display: flex; gap: 36px; margin-top: auto; padding-top: 32px; }
+.pcard-stat { display: flex; flex-direction: column; gap: 4px; }
+.pcard-stat-num {
+  font-family: "Syne", sans-serif;
+  font-weight: 800;
+  font-size: 28px;
+  letter-spacing: -0.02em;
+}
+.pcard-stat-label { font-size: 12px; color: var(--muted); line-height: 1.4; }
 .tag {
   padding: 4px 10px;
   border-radius: var(--radius-pill);
@@ -535,18 +545,26 @@ button { font: inherit; background: none; border: none; cursor: pointer; color: 
   background-position: center;
 }
 
-.cs-content { padding: 80px 44px 0; }
-.cs-meta-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-  padding-bottom: 56px;
-  margin-bottom: 56px;
-  border-bottom: 1px solid var(--border);
+.cs-content {
+  padding: 80px 44px 120px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 72px;
 }
-.cs-meta-grid p { font-family: "Syne", sans-serif; font-weight: 700; font-size: 17px; line-height: 1.4; }
+.cs-sidebar {
+  flex: 0 0 216px;
+  position: sticky;
+  top: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-right: 32px;
+  border-right: 1px solid var(--border);
+}
+.cs-sidebar p { font-family: "Syne", sans-serif; font-weight: 700; font-size: 16px; line-height: 1.4; }
 
-.cs-prose { max-width: 760px; }
+.cs-prose { max-width: 720px; flex: 1 1 auto; min-width: 0; }
 .cs-prose h2 {
   font-family: "Syne", sans-serif;
   font-weight: 800;
@@ -596,8 +614,21 @@ button { font: inherit; background: none; border: none; cursor: pointer; color: 
 @media (max-width: 900px) {
   .cs-hero { padding: 120px 20px 0; }
   .cs-visual { margin: 0 20px; }
-  .cs-content { padding: 56px 20px 0; }
-  .cs-meta-grid { grid-template-columns: repeat(2, 1fr); gap: 32px 24px; }
+  .cs-content { padding: 56px 20px 64px; flex-direction: column; gap: 40px; }
+  .cs-sidebar {
+    flex-basis: auto;
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px 32px;
+    padding-right: 0;
+    padding-bottom: 32px;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    width: 100%;
+  }
+  .cs-sidebar > div { flex: 1 1 40%; }
+  .cs-prose { max-width: none; }
   .cs-next { padding: 48px 20px; }
 }
 
